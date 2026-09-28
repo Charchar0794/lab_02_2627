@@ -21,16 +21,70 @@ format:
 
 ### Tasks
 
-- [ ] Print "Hello World" to the console. 
-- [ ] Write a function that takes a name, and prints "Hello <name>" to the console.
-- [ ] Assign the value 42 to a variable called `answer`.
-- [ ] Create a numeric vector containing the numbers 1 through 5.
-- [ ] Create a numeric vector containing the numbers 1 through 1000.
-- [ ] Create a matrix with 10 rows and 10 columns filled with numbers 1 to 100.
-- [ ] Create a data frame with two columns: one called `name` containing three names, and one called `age` containing three ages.
-- [ ] Write a function that returns the square of its input.
-- [ ] Use a for loop to print the numbers 1 to 5.
-- [ ] Use a for loop to compute the mean of a numeric vector.
+- [x] Print "Hello World" to the console. 
+```{r}
+print("Hello World")
+```
+
+- [x] Write a function that takes a name, and prints "Hello <name>" to the console.
+```{r}
+printname <- function(name) {
+  print(paste("Hello", name))
+}
+printname("Charlotte")
+```
+
+- [x] Assign the value 42 to a variable called `answer`.
+```{r}
+answer <- 42
+```
+
+- [x] Create a numeric vector containing the numbers 1 through 5.
+```{r}
+vector = c(1, 2, 3, 4, 5)
+```
+
+- [x] Create a numeric vector containing the numbers 1 through 1000.
+```{r}
+vector_numerical <- 1:1000
+```
+
+- [x] Create a matrix with 10 rows and 10 columns filled with numbers 1 to 100.
+```{r}
+mat = matrix(1:100, nrow = 10, ncol = 10)
+```
+
+- [x] Create a data frame with two columns: one called `name` containing three names, and one called `age` containing three ages.
+```{r}
+df <- data.frame(
+  name = c("Harvey", "Brian", "Charlotte"),
+  age = c(19, 23, 21)
+)
+```
+
+- [x] Write a function that returns the square of its input.
+```{r}
+square = function(x){
+  (x^2)
+}
+```
+
+- [x] Use a for loop to print the numbers 1 to 5.
+```{r}
+for(i in 1:5){
+  print(i)
+}
+```
+
+- [x] Use a for loop to compute the mean of a numeric vector.
+```{r}
+vector_numerical <- 1:1000
+total = 0
+for (i in vector_numerical){
+  total <- total + i
+}
+average <- total/length(vector_numerical)
+```
 
 
 ## Part 1b: Lists
@@ -38,7 +92,15 @@ format:
 Recall that a *list* can hold a mixture of types, and that lists turn up all over `R` — in particular, they are how a function returns several results at once, and how we store a collection of records.
 
 - [ ] A function can only return a single object, so when we want to return several results we bundle them into a list. Write a function `summarise_vector(x)` that returns a **named list** with the `mean`, `min`, `max`, and `n` (length) of a numeric vector `x`. Call it on `c(210, 217, 230, 205)` and use `$` to print just the mean from the result.
+```{r}
+
+```
+
 - [ ] Call `str()` on the value your function returns to confirm its structure, then modify `summarise_vector` so that missing values are ignored (test it on a vector containing `NA`).
+```{r}
+
+```
+
 - [ ] Below is a list of penguins, each itself a list. Using a `for` loop (or `sapply`), extract the `species` of every penguin into a character vector, and compute the mean flipper length across all of them.
 
 ```{r}
